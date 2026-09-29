@@ -1,2 +1,0 @@
-﻿# Curso-FullStack
-Etapa 1 del TP con Bootstrap
