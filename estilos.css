@@ -1,8 +1,17 @@
+/*GENERAL*/
 body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'DM Sans', sans-serif;
+}
+.navbar-tienda {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer-tienda {
+  color: #fff;
 }
 
 /*INICIO*/
@@ -25,6 +34,18 @@ body{
   height: 1px;
   background-color: #000;
    margin: 2px 0;
+}
+
+/*Barra descuentos*/
+/* Barrita superior estilo 47 Street */
+.barra-anuncios {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
 }
 
 /*Menu desplegable*/
@@ -69,25 +90,42 @@ body{
   object-fit: cover;
   display: block;
 }
+
+/*CARDS*/
+.card {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.card-img-top {
+  border-radius: 0;
+  background-color: #f5f3ee;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #333;
+}
  
-/* En celulares, 90vh de carrusel es demasiado alto (obliga a scrollear mucho
-   antes de ver el resto de la página). Lo achicamos en pantallas chicas. */
+/* En celulares, 90vh de carrusel es demasiado alto (obliga a scrollear mucho antes de ver el resto de la página)*/
 @media (max-width: 767.98px) {
   .carousel-item img {
     height: 50vh;
   }
 }
  
-/* En tablets, un punto intermedio */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .carousel-item img {
     height: 65vh;
   }
 }
  
-/* En celulares en horizontal (poca altura, mucho ancho), 50vh de una
-   pantalla de ~400px de alto sigue siendo razonable, pero si la pantalla
-   es muy baja evitamos que el carrusel se vea desproporcionado */
+/* En celulares en horizontal (poca altura mucho ancho)*/
 @media (max-width: 767.98px) and (orientation: landscape) {
   .carousel-item img {
     height: 60vh;
