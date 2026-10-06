@@ -1,3 +1,10 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans', sans-serif;
+}
+
 /*INICIO*/
 /*Boton hamburguesa*/
 .btn-hamburguesa {
@@ -58,8 +65,7 @@
  
 /*Carrusel*/
 .carousel-item img {
-  width: 100%;      /* antes: 100vw -> podía generar scroll horizontal si había scrollbar vertical */
-  height: 90vh;
+  width: 100%;      
   object-fit: cover;
   display: block;
 }
