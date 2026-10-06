@@ -21,9 +21,9 @@
 }
 
 /*Menu desplegable*/
-/* "Productos" no es un link, así que no debe verse como uno */
+/* "Productos" no es un link pero tiene qeu ser clickeable para desplegar el menú (después ver alguna respuesta visual para hacerlo hover en desktop)*/
 .texto-no-link {
-  cursor: default;
+  cursor: pointer;
   display: block;
   padding: 10px 0;
 }
@@ -36,21 +36,54 @@
   padding-left: 15px;
 }
 
-/* Al hacer hover sobre el <li> completo, el submenú se expande */
-.menu-con-submenu:hover .submenu {
-  max-height: 150px; /* suficiente para mostrar las 2 opciones */
+/* Hover: SOLO en dispositivos que realmente tienen mouse (desktop).
+   En tablet/celular esta regla no se activa, porque ahí no existe "hover". */
+@media (hover: hover) and (pointer: fine) {
+  .menu-con-submenu:hover .submenu {
+    max-height: 150px;
+  }
 }
-
+ 
+/* Clic/toque: funciona en CUALQUIER dispositivo (mouse, tablet, celular).
+   La clase "submenu-abierto" la agrega el JS al hacer clic/toque en "Productos". */
+.menu-con-submenu.submenu-abierto .submenu {
+  max-height: 150px;
+}
+ 
 .submenu li a {
   display: block;
   padding: 6px 0;
   font-size: 1rem;
 }
-
+ 
 /*Carrusel*/
 .carousel-item img {
-  width: 100vw;
-  height: 90vh;        
-  object-fit: cover;    
+  width: 100%;      /* antes: 100vw -> podía generar scroll horizontal si había scrollbar vertical */
+  height: 90vh;
+  object-fit: cover;
   display: block;
+}
+ 
+/* En celulares, 90vh de carrusel es demasiado alto (obliga a scrollear mucho
+   antes de ver el resto de la página). Lo achicamos en pantallas chicas. */
+@media (max-width: 767.98px) {
+  .carousel-item img {
+    height: 50vh;
+  }
+}
+ 
+/* En tablets, un punto intermedio */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-item img {
+    height: 65vh;
+  }
+}
+ 
+/* En celulares en horizontal (poca altura, mucho ancho), 50vh de una
+   pantalla de ~400px de alto sigue siendo razonable, pero si la pantalla
+   es muy baja evitamos que el carrusel se vea desproporcionado */
+@media (max-width: 767.98px) and (orientation: landscape) {
+  .carousel-item img {
+    height: 60vh;
+  }
 }
