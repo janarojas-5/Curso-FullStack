@@ -90,6 +90,26 @@ body{
   letter-spacing: 0.05em;
 }
 
+/*Fondo contacto*/
+/* Fondo solo para contacto.html */
+.pagina-contacto {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("img/FORMfondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* En celulares, la imagen se mueve con la página (más estable) */
+@media (max-width: 767.98px) {
+  .pagina-contacto {
+    background-attachment: scroll;
+  }
+}
+
+
+
 /* Hover: SOLO en dispositivos que realmente tienen mouse (desktop). En tablet/celular esta regla no se activa, porque ahí no existe "hover". */
 @media (hover: hover) and (pointer: fine) {
   .menu-con-submenu:hover .submenu {
