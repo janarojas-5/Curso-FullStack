@@ -10,23 +10,25 @@
 </head>
 
 <body> 
-  <div class="container text-center">
-  <div class="row align-items-start">
-    <div class="col">
-      <div class="col">
-          <button class="btn-hamburguesa" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-label="Abrir menú">
-           <span></span>
-           <span></span>
-           <span></span>
-          </button>
-      </div>
+    <nav class="navbar py-3" style="background-color: #f7f3ed;" >
+  <div class="container-fluid px-4">
+    
+    <!-- Lado Izquierdo: Botón Hamburguesa + Nombre de la Tienda -->
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn-hamburguesa" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <a class="navbar-brand mb-0 h1 fw-bold text-danger-emphasis" href="inicio.html">
+        <img src="img/logo.png" alt="Logo Tienda JL" width="40" height="40" class="d-inline-block me-2 rounded-circle">
+        Tienda JL
+      </a>
     </div>
-    <div class="col">
-      Tienda JL
-    </div>
-    <div class="col"></div>
+
   </div>
-</div>
+</nav>
 
 <!-- MENÚ LATERAL -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
@@ -35,15 +37,15 @@
   </div>
 <div class="offcanvas-body">
   <ul class="list-unstyled fs-5">
-    <li><a href="inicio.html">Inicio</a></li>
+    <li><a class="text-decoration-none text-dark" href="inicio.html">Inicio</a></li>
     <li class="menu-con-submenu">
       <span class="texto-no-link">Productos</span>
       <ul class="submenu list-unstyled">
-        <li><a href="buzos.html">Buzos</a></li>
-        <li><a href="pantalones.html">Pantalones</a></li>
+        <li><a class="text-decoration-none text-dark" href="buzos.html">Buzos</a></li>
+        <li><a class="text-decoration-none text-dark" href="pantalones.html">Pantalones</a></li>
       </ul>
     </li>
-    <li><a href="contacto.html">Contacto</a></li>
+   <li><a class="text-decoration-none text-dark" href="contacto.html">Contacto</a></li>
   </ul>
 </div>
 </div>
