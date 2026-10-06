@@ -64,8 +64,33 @@ body{
   padding-left: 15px;
 }
 
-/* Hover: SOLO en dispositivos que realmente tienen mouse (desktop).
-   En tablet/celular esta regla no se activa, porque ahí no existe "hover". */
+/*FORM*/
+.card-header-tienda {
+  background-color: #800020;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-control {
+  border: 1px solid #800020;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+/* borde negro en vez azul */
+.form-control:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Hover: SOLO en dispositivos que realmente tienen mouse (desktop). En tablet/celular esta regla no se activa, porque ahí no existe "hover". */
 @media (hover: hover) and (pointer: fine) {
   .menu-con-submenu:hover .submenu {
     max-height: 150px;
