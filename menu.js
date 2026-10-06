@@ -4,3 +4,5 @@ document.querySelectorAll('.menu-con-submenu > .texto-no-link').forEach(function
     this.parentElement.classList.toggle('submenu-abierto');
   });
 });
+
+

@@ -98,10 +98,39 @@
     </div>
   </footer>
 
+  <!-- Pop up de agradecimiento -->
+<div class="modal fade" id="modalGracias" tabindex="-1" aria-labelledby="modalGraciasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header modal-header-tienda">
+        <h5 class="modal-title" id="modalGraciasLabel">¡Mensaje enviado!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center py-4">
+        <p class="mb-0">¡Gracias por escribirnos! Nos vamos a comunicar con vos a la brevedad.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-tienda" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!--bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <!--menu mobile/tablet-->
 <script src="menu.js"></script>
+
+<script>
+  const formulario = document.querySelector("form");
+  const modalGracias = new bootstrap.Modal(document.getElementById("modalGracias"));
+
+  formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault();   // frena el envío normal
+    modalGracias.show();       // muestra el pop up
+    formulario.reset();        // vacía los campos
+  });
+</script>
 
 </body>
 </html>
